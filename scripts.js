@@ -1,24 +1,36 @@
 function addSkillCircleChart() {	
 	// Xóa nút thêm donut
-	$('.btn-donut-chart').remove();
-	let btnNoMd = '<div class="skill-donut-chart btn-donut-chart"> \
+	$('.wrap-donut-btn').remove();
+
+	let typeCol;
+	let temp = ($('.skill-donut-chart').length + 2) % 3;
+	alert($('.skill-donut-chart').length + 2);
+	if (temp == 0)
+	    typeCol = 'wrap-donut-chart-left';
+	else if (temp == 1)
+	    typeCol = 'wrap-donut-chart-center';
+	else
+	    typeCol = 'wrap-donut-chart-right';
+	let btnNoMd = '<div class="' + typeCol +'"><div class="skill-donut-chart btn-donut-chart"> \
 						<div  class="row justify-content-center"> \
 							<div class="btn" onclick="addSkillCircleChart()"> \
 								<span>Add skill</span> \
 								<i class="fa fa-plus"></i> \
 							</div> \
 						</div> \
+					</div>\
 					</div>';
 
 	//Thêm chart
 	let charts = document.getElementsByClassName("sec-skill-donut-chart")[0];
-	charts.innerHTML += '<div class="skill-donut-chart"> \
+	charts.innerHTML += '<div class="\' + typeCol +\'"><div class="skill-donut-chart"> \
 							<svg width="100%" height="100%" viewBox="0 0 100 100" class="donut"> \
 								<circle class="donut-ring donut-chart"></circle> \
 								<circle class="donut-segment donut-chart"></circle> \
 								<text x="50%" y="50%">100%</text> \
 							</svg> \
 							<p class="skill-name">NEW SKILL</p> \
+						</div>\
 						</div>' + btnNoMd;
 
 }
@@ -149,7 +161,7 @@ $(document).on('ready', function() {
 		let dasharray = 298.451302091;
 		let percent = $(this).text().substring(0, 2);
 		offset = (100 - percent) * dasharray / 100;
-		
+
 		$(this).prev().attr({
 			'stroke-dashoffset': offset
 		});
@@ -158,5 +170,17 @@ $(document).on('ready', function() {
 			'x' : '50%',
 			'y' : '50%'
 		});
-	})
+	});
+
+    //Set margin for donut chart.
+    // $('.skill-donut-chart').each(function() {
+    //     // let percent = $(this).text();
+    //     // $(this).parent().css('width', percent);
+    //     alert('hoho');
+    //
+    //     if ($(this).css('grid-column') == '1') {
+    //         alert('hihi');
+    //         $(this).css('margin-left', '-50px')
+    //     }
+    // });
 });

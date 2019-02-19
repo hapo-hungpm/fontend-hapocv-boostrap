@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap-grid.min.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Port+Lligat+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -35,7 +34,9 @@
 								<span>bumblebee</span>
 								<div class="line-job line"></div>
 							</div>
-						walker</div>
+
+						walker
+						</div>
 						<p class="job-cover">Ruby on Rail Developer</p>
 					</div>
 				</div>
@@ -61,25 +62,40 @@
 						<p class="birthday-info">25/12/1992</p>
 					</div>
 				</div>
+				<div class="row justify-content-center">
+					
+				</div>
 				<div class="info-form-wrap">
 					<div class="row justify-content-center"><div class="col-md-12 line-info line"></div></div>
 					<div class="row justify-content-center">
-						<div class="col-label">
-							<p>Phone:</p>
-							<p>Email:</p>
-							<p>Facebook:</p>
-							<p>Skype:</p>
-							<p>Chatwork:</p>
-							<p>Address:</p>
-						</div>
-						<div class="col col-data">
-							<p>0123456789</p>
-							<p>bumblebee@gmail.com</p>
-							<p>bumblebee</p>
-							<p>bumblebee</p>
-							<p>bumblebee</p>
-							<p>58 Tran Binh - Mai Dich - Cau Giay - Ha Noi</p>
-						</div>
+						<table class="row justify-content-center">
+							<tbody>
+								<tr>
+									<td class="col-label">Phone:</td>
+									<td class="col col-data">0123456789</td>
+								</tr>
+								<tr>
+									<td class="col-label">Email:</td>
+									<td class="col col-data email">bumblebee@gmail.com</td>
+								</tr>
+								<tr>
+									<td class="col-label">Facebook:</td>
+									<td class="col col-data">bumblebee</td>
+								</tr>
+								<tr>
+									<td class="col-label">Skype:</td>
+									<td class="col col-data">bumblebee</td>
+								</tr>
+								<tr>
+									<td class="col-label">Chatwork:</td>
+									<td class="col col-data">bumblebee</td>
+								</tr>
+								<tr>
+									<td class="col-label">Address:</td>
+									<td class="col col-data">58 Tran Binh - Mai Dich - Cau Giay - Ha Noi</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 					<div class="row justify-content-center">
 						<div class="btn-edit-profile">
@@ -94,8 +110,13 @@
 			<div class="col-md-12 wrap-col wrap-row-content">
 				<div class="sec-header">
 					<div class="line line-top"></div>
-					<p>professional summary</p>
-					<div class="line line-bottom"></div>
+					<div>
+						<div style="display: inline-block;">
+							<span>professional</span>
+							<div class="line"></div>
+						</div>
+						summary
+					</div>
 				</div>
 				<div>
 					<p class="sec-intro" contenteditable="true" spellcheck="false">
@@ -103,7 +124,7 @@
 					</p>
 				</div>
 				<div class="row row-btn">
-					<div class="btn btn-right btn-edit-sumary">
+					<div class="btn btn-right btn-edit-summary">
 						<span>Edit summary</span>
 						<i class="fas fa-pen"></i>
 					</div>
@@ -115,56 +136,74 @@
 				<div class="col-md-6 wrap-col wrap-col-left">
 					<div class="sec-header">
 						<div class="line line-top"></div>
-						<p>professional skills</p>
-						<div class="line line-bottom"></div>
+						<div>
+							<div style="display: inline-block;">
+								<span>professional</span>
+								<div class="line"></div>
+							</div>
+							skills
+						</div>
 					</div>
 					<p class="sec-intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincclassunt</p>
-					<div class="row sec-skill-donut-chart">
-						<div class="skill-donut-chart">
-							<svg class="donut">
-								<circle class="donut-ring"></circle>
-								<circle class="donut-segment"></circle>
-								<text>20%</text>
-							</svg>
-							<p class="skill-name">html/css</p>
+					<div class="row skill-chart sec-skill-donut-chart">
+						<div class="wrap-donut-chart-left">
+							<div class="skill-donut-chart">
+								<svg class="donut">
+									<circle class="donut-ring"></circle>
+									<circle class="donut-segment"></circle>
+									<text>75%</text>
+								</svg>
+								<p class="skill-name">html/css</p>
+							</div>
 						</div>
-						<div class="skill-donut-chart">
-							<svg class="donut">
-								<circle class="donut-ring"></circle>
-								<circle class="donut-segment"></circle>
-								<text>65%</text>
-							</svg>
-							<p class="skill-name">c#.net</p>
+						<div class="wrap-donut-chart-center">
+							<div class="skill-donut-chart">
+								<svg class="donut">
+									<circle class="donut-ring"></circle>
+									<circle class="donut-segment"></circle>
+									<text>65%</text>
+								</svg>
+								<p class="skill-name">c#.net</p>
+							</div>
 						</div>
-						<div class="skill-donut-chart">
-							<svg  class="donut">
-								<circle class="donut-ring"></circle>
-								<circle class="donut-segment"></circle>
-								<text>50%</text>
-							</svg>
-							<p class="skill-name">my sql</p>
+						<div class="wrap-donut-chart-right">
+							<div class="skill-donut-chart">
+								<svg  class="donut">
+									<circle class="donut-ring"></circle>
+									<circle class="donut-segment"></circle>
+									<text>50%</text>
+								</svg>
+								<p class="skill-name">my sql</p>
+							</div>
+
 						</div>
-						<div class="skill-donut-chart sec-btn-donut-chart">
-							<svg class="donut">
-								<circle class="donut-ring"></circle>
-								<circle class="donut-segment"></circle>
-								<text>75%</text>
-							</svg>
-							<p class="skill-name">php</p>
+						<div class="wrap-donut-chart-left">
+							<div class="skill-donut-chart sec-btn-donut-chart">
+								<svg class="donut">
+									<circle class="donut-ring"></circle>
+									<circle class="donut-segment"></circle>
+									<text>75%</text>
+								</svg>
+								<p class="skill-name">php</p>
+							</div>
 						</div>
-						<div class="skill-donut-chart">
-							<svg class="donut">
-								<circle class="donut-ring"></circle>
-								<circle class="donut-segment"></circle>
-								<text>65%</text>
-							</svg>
-							<p class="skill-name">react native</p>
+						<div class="wrap-donut-chart-center">
+							<div class="skill-donut-chart">
+								<svg class="donut">
+									<circle class="donut-ring"></circle>
+									<circle class="donut-segment"></circle>
+									<text>65%</text>
+								</svg>
+								<p class="skill-name">react native</p>
+							</div>
 						</div>
-						<div class="skill-donut-chart btn-donut-chart">
-							<div  class="row justify-content-center">
-								<div class="btn" onclick="addSkillCircleChart()">
-									<span>Add skill</span>
-									<i class="fa fa-plus"></i>
+						<div class="wrap-donut-chart-right wrap-donut-btn">
+							<div class="skill-donut-chart btn-donut-chart">
+								<div  class="row justify-content-center">
+									<div class="btn" onclick="addSkillCircleChart()">
+										<span>Add skill</span>
+										<i class="fa fa-plus"></i>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -179,11 +218,16 @@
 				<div class="col-md-6 wrap-col">
 					<div class="sec-header">
 						<div class="line line-top"></div>
-						<p>personal skills</p>
-						<div class="line line-bottom"></div>
+						<div>
+							<div style="display: inline-block;">
+								<span>personal</span>
+								<div class="line"></div>
+							</div>
+							skills
+						</div>
 					</div>
 					<p class="sec-intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincclassunt</p>
-					<div class="chart-work-edu">
+					<div class="skill-chart">
 						<div class="row sec-skill-line-charts">
 							<div class="sec-skill-line-chart">
 								<h5>team work</h5>
@@ -219,8 +263,13 @@
 				<div class="col-md-6 wrap-col sec-work wrap-col-left">
 					<div class="sec-header">
 						<div class="line line-top"></div>
-						<p>work experience</p>
-						<div class="line line-bottom"></div>
+						<div>
+							<div style="display: inline-block;">
+								<span>work</span>
+								<div class="line"></div>
+							</div>
+							experience
+						</div>
 					</div>
 					<p class="sec-intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincclassunt</p>
 					<div class="chart-work-edu">
