@@ -1,13 +1,11 @@
 @font-face { font-family: Poppins-h1; font-display: auto; src: url("../../font/poppins/Poppins-Bold.otf"); }
 @font-face { font-family: Poppins; font-display: auto; src: url("../../font/poppins/Poppins-ExtraLight.otf"); }
-@font-face { font-family: Poppins-language; font-display: auto; src: url("../../font/poppins/Poppins-Thin.otf"); }
-@font-face { font-family: Poppins-Regular; font-display: auto; src: url("../../font/poppins/Poppins-Regular.otf"); }
 @font-face { font-family: Poppins-Medium; font-display: auto; src: url("../../font/poppins/Poppins-Medium.otf"); }
 .sec-skill-donut-chart .skill-donut-chart .donut .donut-ring, .sec-skill-donut-chart .skill-donut-chart .donut .donut-segment { fill: none; stroke-width: 5; cx: 50; cy: 50; r: 47.5; }
 
 * { box-sizing: border-box; }
 
-body { font-family: Poppins; font-style: normal; font-weight: normal; font-size: 14px; line-height: normal; text-align: justify; margin: 0; color: #FFFFFF; }
+body { font-weight: normal; font-size: 14px; font-family: Poppins; letter-spacing: inherit; text-transform: inherit; line-height: normal; text-align: justify; margin: 0; color: #FFFFFF; }
 
 .row, .col, .col-md, .col-md-6, .col-md-12 { position: relative; width: 100%; margin: 0; padding: 0; }
 
@@ -16,7 +14,7 @@ body { font-family: Poppins; font-style: normal; font-weight: normal; font-size:
 /*line*/
 .line { height: 2.5px; background-color: #F85365; }
 
-.line-info { margin: 10px 0 14.5px 0; max-width: 470px; }
+.line-info { margin: 9px 0 14.5px 0; max-width: 470px; }
 
 /*btn*/
 .btn { padding: 6px 15px 7px 15px; border: 1px solid #F85365; margin-top: 28px; cursor: pointer; }
@@ -35,7 +33,7 @@ body { font-family: Poppins; font-style: normal; font-weight: normal; font-size:
 
 .btn-donut-chart-md { display: none; }
 
-.btn-donut-chart { grid-column: 3; }
+.wrap-donut-btn { grid-column: 3; }
 
 /*avt-change*/
 .sec-camera, .avatar-change div { display: none; }
@@ -70,7 +68,7 @@ body { font-family: Poppins; font-style: normal; font-weight: normal; font-size:
 
 .language-md { display: none; }
 
-.name-info { height: 20px; margin-top: 16px; font-weight: bold; font-family: Poppins-Medium; letter-spacing: 0.05em; text-transform: uppercase; text-align: center; }
+.name-info { margin-top: 16px; text-align: center; font-weight: bold; font-size: inherit; font-family: Poppins-Medium; letter-spacing: 0.05em; text-transform: uppercase; }
 
 .birthday-info { height: 21px; text-align: center; }
 
@@ -87,8 +85,7 @@ body { font-family: Poppins; font-style: normal; font-weight: normal; font-size:
 
 .email { word-break: break-all; }
 
-.col-label { max-width: 75px; width: 100px; margin-left: 0; font-weight: 800; }
-.col-label p { margin-bottom: 15px; font-weight: 800; }
+.col-label { max-width: 75px; width: 100px; margin-left: 0; font-weight: 800; font-size: inherit; font-family: Poppins-Medium; letter-spacing: inherit; text-transform: inherit; }
 
 tr { height: 36px; }
 
@@ -96,8 +93,8 @@ tbody { width: 470px; }
 
 .sec-profess-sum { background: #2026B2; }
 
-.sec-header { font-size: 25px; font-family: Poppins-h1; letter-spacing: 0.05em; margin-bottom: 17.5px; text-transform: uppercase; font-weight: bold; display: inline-block; position: relative; align-self: flex-start; }
-.sec-header .line-top { width: 25%; position: absolute; right: 0; }
+.sec-header { margin-bottom: 17.5px; display: inline-block; position: relative; align-self: flex-start; font-weight: bold; font-size: 25px; font-family: Poppins-h1; letter-spacing: 0.05em; text-transform: uppercase; }
+.sec-header .line-top { width: 45px; position: absolute; right: 0; }
 .sec-header .line-bottom { width: 50%; }
 
 /*Professional skills - Personal skills*/
@@ -113,7 +110,6 @@ tbody { width: 470px; }
 .sec-skill-donut-chart .skill-donut-chart .donut { height: 100px; width: 100px; stroke-dasharray: 298.451302091; }
 .sec-skill-donut-chart .skill-donut-chart .donut .donut-ring { stroke: #d2d3d4; }
 .sec-skill-donut-chart .skill-donut-chart .donut .donut-segment { stroke: #F85365; }
-@keyframes donut-segment { from { stroke-dashoffset: 314; } }
 .sec-skill-donut-chart .skill-donut-chart .donut text { text-anchor: middle; alignment-baseline: middle; fill: white; }
 .sec-skill-donut-chart .skill-donut-chart .skill-name { margin-top: 10px; font-weight: 500; text-transform: uppercase; }
 
@@ -212,56 +208,5 @@ tbody { width: 470px; }
 
 /*footer*/
 .footer { height: 50px; background-color: #0C0C5E; align-items: center; }
-
-@media only screen and (max-width: 768px) { .wrap-col { padding: 35px 15px; }
-  .info { padding-top: 0; }
-  .col-data { max-width: 738px; }
-  tbody { width: 738px; }
-  .line-info { max-width: 768px; }
-  .row-btn { justify-content: center; }
-  .btn-edit-profile { margin-bottom: 35px; }
-  .line { height: 1.5px; }
-  .sec-header { font-size: 16px; margin-bottom: 11.5px; }
-  .skill-chart { margin-top: -5px; }
-  .sec-skill-line-chart { margin-top: 15px; }
-  .event-chart { padding-bottom: 10px !important; }
-  .sec-graphic { grid-template-columns: 50% 50%; margin-top: 5px; }
-  .sec-graphic .rec-horizon { padding: 63.188405797% 0 0 0; }
-  .sec-graphic .rec-vertical { padding: 126.376811594% 0 0 0; }
-  .btn { margin-top: 15px; cursor: pointer; }
-  .btn-edit-summary { margin-right: 0; }
-  .rec-btn { grid-column: 2; }
-  .wrap-col-left { padding-bottom: 0; }
-  .btn-donut-chart { display: none !important; }
-  .btn-donut-chart-md { display: flex; }
-  .chart-work-edu { margin: 15px 0 7px 8px; }
-  .btn-work-edu { margin-right: 0; }
-  .chart-content-ref { margin: 8px 0 21px 15px; }
-  .sec-quotes { margin: 0; padding: 0 15px; }
-  .sec-quotes .quotes { font-size: 60px; }
-  .sec-quotes .quote-open { top: -15px; left: -14px; }
-  .sec-quotes .quote-end { bottom: -36px; }
-  .avatar-ref { margin-bottom: 15px; transform: translate(-15px); }
-  .avt-cover { height: 175px; background: url(./../../imgs/photographer-1867417_1920.jpg) center, #C4C4C4; background-size: 100% auto; position: relative; }
-  .info-cover { margin-top: 39px; }
-  .name-cover { font-size: 16px; }
-  .job-cover { font-size: 14px; }
-  .sec-camera { height: 35px; width: 35px; }
-  .sec-camera .fa-camera { right: 8px; bottom: 8px; font-size: 10px; }
-  .avatar-change { width: 100px; height: 100px; margin-top: -50px; }
-  .avatar-change div { height: 20px; }
-  .language { display: none; }
-  .language-md { display: flex; width: 159px; }
-  .name-info { margin-top: 16px; }
-  .line-dot-horizon { min-width: 26px; }
-  .info-form-wrap { transform: translate(0); }
-  .slick-prev { top: 90px; left: 20%; }
-  .slick-next { top: 90px; right: 20%; }
-  .slick-list { margin: 0; }
-  .menu { margin-left: 0; }
-  .menu a:first-child { margin-left: 0; } }
-@media only screen and (max-width: 576px) { .sec-skill-donut-chart { grid-template-columns: 50% 50%; margin-top: -10px; } }
-@media only screen and (max-width: 370px) { .slick-prev { left: 5%; }
-  .slick-next { right: 5%; } }
 
 /*# sourceMappingURL=style.css.map */

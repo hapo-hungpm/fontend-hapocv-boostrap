@@ -1,17 +1,18 @@
-function addSkillCircleChart() {	
-	// Xóa nút thêm donut
-	$('.wrap-donut-btn').remove();
+function addSkillCircleChart() {
+    // Xóa nút thêm donut
+    $('.wrap-donut-btn').remove();
 
-	let typeCol;
-	let temp = ($('.skill-donut-chart').length + 2) % 3;
-	alert($('.skill-donut-chart').length + 2);
-	if (temp == 0)
-	    typeCol = 'wrap-donut-chart-left';
-	else if (temp == 1)
-	    typeCol = 'wrap-donut-chart-center';
-	else
-	    typeCol = 'wrap-donut-chart-right';
-	let btnNoMd = '<div class="' + typeCol +'"><div class="skill-donut-chart btn-donut-chart"> \
+    let typeCol;
+    let temp = ($('.skill-donut-chart').length + 1) % 3;
+
+    if (temp == 0)
+        typeCol = 'wrap-donut-chart-right';
+    else if (temp == 1)
+        typeCol = 'wrap-donut-chart-left';
+    else
+        typeCol = 'wrap-donut-chart-center';
+
+    let btnNoMd = '<div class="wrap-donut-chart-right wrap-donut-btn""><div class="skill-donut-chart btn-donut-chart> \
 						<div  class="row justify-content-center"> \
 							<div class="btn" onclick="addSkillCircleChart()"> \
 								<span>Add skill</span> \
@@ -20,10 +21,9 @@ function addSkillCircleChart() {
 						</div> \
 					</div>\
 					</div>';
-
-	//Thêm chart
-	let charts = document.getElementsByClassName("sec-skill-donut-chart")[0];
-	charts.innerHTML += '<div class="\' + typeCol +\'"><div class="skill-donut-chart"> \
+    //Thêm chart
+    let charts = document.getElementsByClassName("sec-skill-donut-chart")[0];
+    charts.innerHTML += '<div class="' + typeCol + '"><div class="skill-donut-chart"> \
 							<svg width="100%" height="100%" viewBox="0 0 100 100" class="donut"> \
 								<circle class="donut-ring donut-chart"></circle> \
 								<circle class="donut-segment donut-chart"></circle> \
@@ -36,8 +36,8 @@ function addSkillCircleChart() {
 }
 
 function addSkillLineChart() {
-	let charts = document.getElementsByClassName("sec-skill-line-charts")[0];
-	charts.innerHTML += '<div class="sec-skill-line-chart"> \
+    let charts = document.getElementsByClassName("sec-skill-line-charts")[0];
+    charts.innerHTML += '<div class="sec-skill-line-chart"> \
 								<h5>NEW SKILL<h5> \
 							<div class="progress-bar"> \
 							<div><p>100%</p></div> \
@@ -46,8 +46,8 @@ function addSkillLineChart() {
 }
 
 function addEventWorkChart() {
-	let charts = document.getElementsByClassName("chart-work")[0];
-	charts.innerHTML += '<div class="event-chart"> \
+    let charts = document.getElementsByClassName("chart-work")[0];
+    charts.innerHTML += '<div class="event-chart"> \
 							<div class="arrow-right"></div> \
 							<div class="line-dot-horizon"></div> \
 							<div class="chart-content"> \
@@ -60,8 +60,8 @@ function addEventWorkChart() {
 }
 
 function addEventEduChart() {
-	let charts = document.getElementsByClassName("chart-edu")[0];
-	charts.innerHTML += '<div class="event-chart"> \
+    let charts = document.getElementsByClassName("chart-edu")[0];
+    charts.innerHTML += '<div class="event-chart"> \
 							<div class="arrow-right"></div> \
 							<div class="line-dot-horizon"> \
 							</div> \
@@ -76,32 +76,30 @@ function addEventEduChart() {
 
 function addProjectChart() {
 
-	let charts = document.getElementsByClassName('sec-graphic')[0];
-	let numTypeChart = 9;
-	let horOrVerClass, image;
-	let numExistedChart = charts.childElementCount;
-	let typeNewChart = numExistedChart % numTypeChart;
+    let charts = document.getElementsByClassName('sec-graphic')[0];
+    let numTypeChart = 9;
+    let horOrVerClass, image;
+    let numExistedChart = charts.childElementCount;
+    let typeNewChart = numExistedChart % numTypeChart;
 
-	//set rec-vertical or rec-horizon
-	if (typeNewChart == 2 || typeNewChart == 6) {
-		horOrVerClass = 'rec-vertical';
-	}
-	else {
-		horOrVerClass = 'rec-horizon';
-	}
+    //set rec-vertical or rec-horizon
+    if (typeNewChart == 2 || typeNewChart == 6) {
+        horOrVerClass = 'rec-vertical';
+    } else {
+        horOrVerClass = 'rec-horizon';
+    }
 
-	//sec image
-	if (typeNewChart == 2 || typeNewChart == 7) {
-		image = '2222.png';
-	}
-	else {
-		image = '1111.png'
-	}
+    //sec image
+    if (typeNewChart == 2 || typeNewChart == 7) {
+        image = '2222.png';
+    } else {
+        image = '1111.png'
+    }
 
-	// xóa rec-btn
-	document.getElementsByClassName('rec-btn')[0].remove();
+    // xóa rec-btn
+    document.getElementsByClassName('rec-btn')[0].remove();
 
-	charts.innerHTML += '<div class="row justify-content-center' + ' rec' + typeNewChart + ' ' + horOrVerClass + '">\
+    charts.innerHTML += '<div class="row justify-content-center' + ' rec' + typeNewChart + ' ' + horOrVerClass + '">\
 							<div><img src="imgs/' + image + '"></div> \
 						</div> \
 						<div class="rec-horizon rec-btn"> \
@@ -114,21 +112,21 @@ function addProjectChart() {
 						</div>';
 }
 
-$(document).on('ready', function() {
+$(document).on('ready', function () {
 
-	//slick references
-	$(".regular").slick({
-		dots: true,
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		autoplay: false,
-		autoplaySpeed: 7000
-	});
+    //slick references
+    $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 7000
+    });
 
-	//slick add slide
-	$('.btn-add-ref').on('click', function() {
-		let newRef = '<div>\
+    //slick add slide
+    $('.btn-add-ref').on('click', function () {
+        let newRef = '<div>\
 						<div class="row justify-content-center chart-content-ref">\
 							<div class=" avatar-ref avatar"></div>\
 							<div class="col-md sec-quotes">\
@@ -141,46 +139,34 @@ $(document).on('ready', function() {
 							</div>\
 						</div>\
 					</div>';
-		$('.regular').slick('slickAdd', newRef);
-	});
+        $('.regular').slick('slickAdd', newRef);
+    });
 
-	//Set clicked event for language choosen.
-	$('.language span').click(function() {
-		$('.language span').removeClass('lan-choosed');
-		$(this).addClass('lan-choosed');
-	});
+    //Set clicked event for language choosen.
+    $('.language span').click(function () {
+        $('.language span').removeClass('lan-choosed');
+        $(this).addClass('lan-choosed');
+    });
 
-	//Set percentage for skill line chart.
-	$('.progress-bar div p').each(function() {
-		let percent = $(this).text();
-		$(this).parent().css('width', percent);
-	});
+    //Set percentage for skill line chart.
+    $('.progress-bar div p').each(function () {
+        let percent = $(this).text();
+        $(this).parent().css('width', percent);
+    });
 
-	//Set percentage for donut chart.
-	$('.donut text').each(function() {
-		let dasharray = 298.451302091;
-		let percent = $(this).text().substring(0, 2);
-		offset = (100 - percent) * dasharray / 100;
+    //Set percentage for donut chart.
+    $('.donut text').each(function () {
+        let dasharray = 298.451302091;
+        let percent = $(this).text().substring(0, 2);
+        offset = (100 - percent) * dasharray / 100;
 
-		$(this).prev().attr({
-			'stroke-dashoffset': offset
-		});
+        $(this).prev().attr({
+            'stroke-dashoffset': offset
+        });
 
-		$(this).attr({
-			'x' : '50%',
-			'y' : '50%'
-		});
-	});
-
-    //Set margin for donut chart.
-    // $('.skill-donut-chart').each(function() {
-    //     // let percent = $(this).text();
-    //     // $(this).parent().css('width', percent);
-    //     alert('hoho');
-    //
-    //     if ($(this).css('grid-column') == '1') {
-    //         alert('hihi');
-    //         $(this).css('margin-left', '-50px')
-    //     }
-    // });
+        $(this).attr({
+            'x': '50%',
+            'y': '50%'
+        });
+    });
 });
