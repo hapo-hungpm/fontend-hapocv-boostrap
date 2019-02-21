@@ -1,13 +1,17 @@
+function sayHi(name) {
+    let hihi;
+    return `How are you, ${hihid}?`;
+}
 function addSkillCircleChart() {
-    // Xóa nút thêm donut
+    //delete button add donut
     $('.wrap-donut-btn').remove();
 
     let typeCol;
     let temp = ($('.skill-donut-chart').length + 1) % 3;
 
-    if (temp == 0)
+    if (temp === 0)
         typeCol = 'wrap-donut-chart-right';
-    else if (temp == 1)
+    else if (temp === 1)
         typeCol = 'wrap-donut-chart-left';
     else
         typeCol = 'wrap-donut-chart-center';
@@ -21,17 +25,17 @@ function addSkillCircleChart() {
 						</div> \
 					</div>\
 					</div>';
-    //Thêm chart
+    //add chart
     let charts = document.getElementsByClassName("sec-skill-donut-chart")[0];
-    charts.innerHTML += '<div class="' + typeCol + '"><div class="skill-donut-chart"> \
-							<svg width="100%" height="100%" viewBox="0 0 100 100" class="donut"> \
-								<circle class="donut-ring donut-chart"></circle> \
-								<circle class="donut-segment donut-chart"></circle> \
+    charts.innerHTML += `<div class="${typeCol}"><div class="skill-donut-chart"> \
+							<svg width="100%" height="100%" class="donut"> \
+								<circle class="donut-ring donut-chart" r="47.5"></circle> \
+								<circle class="donut-segment donut-chart" r="47.5"></circle> \
 								<text x="50%" y="50%">100%</text> \
 							</svg> \
 							<p class="skill-name">NEW SKILL</p> \
 						</div>\
-						</div>' + btnNoMd;
+						</div> ${btnNoMd}`;
 
 }
 
@@ -83,24 +87,24 @@ function addProjectChart() {
     let typeNewChart = numExistedChart % numTypeChart;
 
     //set rec-vertical or rec-horizon
-    if (typeNewChart == 2 || typeNewChart == 6) {
+    if (typeNewChart === 2 || typeNewChart === 6) {
         horOrVerClass = 'rec-vertical';
     } else {
         horOrVerClass = 'rec-horizon';
     }
 
     //sec image
-    if (typeNewChart == 2 || typeNewChart == 7) {
+    if (typeNewChart === 2 || typeNewChart === 7) {
         image = '2222.png';
     } else {
         image = '1111.png'
     }
 
-    // xóa rec-btn
+    // delete rec-btn
     document.getElementsByClassName('rec-btn')[0].remove();
 
-    charts.innerHTML += '<div class="row justify-content-center' + ' rec' + typeNewChart + ' ' + horOrVerClass + '">\
-							<div><img src="imgs/' + image + '"></div> \
+    charts.innerHTML += `<div class="row justify-content-center rec${typeNewChart} ${horOrVerClass}">\
+							<div><img src="imgs/${image}" alt="project-img"></div> \
 						</div> \
 						<div class="rec-horizon rec-btn"> \
 							<div class="row justify-content-center wrap-btn"> \
@@ -109,7 +113,7 @@ function addProjectChart() {
 									<i class="fa fa-plus"></i> \
 								</div> \
 							</div> \
-						</div>';
+						</div>`;
 }
 
 $(document).on('ready', function () {
