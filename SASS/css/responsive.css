@@ -189,5 +189,8 @@
 @media only screen and (max-width: 280px) {
   .sec-skill-donut-chart {
     grid-template-columns: 100%; } }
+@media only screen and (max-width: 320px) {
+  .btn-project {
+    padding: 3px; } }
 
 /*# sourceMappingURL=responsive.css.map */
