@@ -284,7 +284,7 @@ tbody {
 
 .sec-skill-donut-chart {
     display: grid;
-    grid-template-columns: 33.333333% 33.333333% 33.333334%;
+    grid-template-columns: auto auto auto;
     grid-template-rows: auto;
 
     @media only screen and (min-width: 576px) {
@@ -423,9 +423,9 @@ tbody {
 
             .line-dot-horizon {
                 min-width: 31px;
-                height: 1px;
+                height: 1.1px;
                 align-self: center;
-                border-top: 2px dashed white;
+                border-top: 1px dashed white;
             }
 
             .chart-content {
@@ -579,6 +579,7 @@ tbody {
 
 .sec-quotes {
     margin-left: 66px;
+    margin-top: 60px;
     position: relative;
 
     .quotes {
@@ -594,9 +595,12 @@ tbody {
     }
 
     .quote-end {
-        display: inline-block;
-        position: absolute;
     }
+
+    .quote-content {
+    	vertical-align: top;
+    }
+
 }
 
 .regular {
@@ -607,7 +611,7 @@ tbody {
 .chart-content-ref {
     align-items: center;
     max-width: 1010px;
-    margin: 3.5px auto 25px auto;
+    margin: -20px auto 0 auto;
 }
 
 .btn-add-ref {
