@@ -135,7 +135,7 @@ $(document).on('ready', function () {
 							<div class=" avatar-ref avatar"></div>\
 							<div class="col-md sec-quotes">\
 								<span class="quotes quote-open"> “</span>\
-								<span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, \
+								<span class="quote-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, \
 								sed diam nonummy nibh euismod tincclassunt ut laoreet dolore magna aliquam erat volutpat. \
 								Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl \
 								ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in</span>\

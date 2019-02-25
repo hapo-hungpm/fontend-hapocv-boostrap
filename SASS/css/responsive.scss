@@ -1,6 +1,6 @@
 @import '_variable';
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .wrap-col {
         padding: 35px 15px;
     }
@@ -154,6 +154,12 @@
             font-size: 10px;
         }
     }
+    .sec-camera-change {
+        i {
+            font-size: 10px;
+        }
+    }
+
 
     .avatar-change {
         width: 100px;
